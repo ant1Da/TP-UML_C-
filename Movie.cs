@@ -4,6 +4,7 @@ class Movie
 {
     private string title;
     private int duration;
+    private Director director;
     public string Title
     {
         get {return title;}
@@ -14,8 +15,14 @@ class Movie
         get {return duration;}
         set {duration = value;}
     }
-    public void Display()
+    public Director Director
     {
-        Console.WriteLine($"Titre : {this.Title} | Durée : {this.Duration}");
+        get {return director;}
+        set {director = value;}
+    }
+    public void DisplayMovie()
+    {
+        Console.WriteLine($"Titre : {Title} | Durée : {Duration}");
+        Director.DisplayDirector();
     }
 }
