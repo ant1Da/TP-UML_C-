@@ -14,7 +14,6 @@ class Program
         director1.Country = "USA";
         director1.DisplayDirector();
         film1.Director = director1;
-        film1.DisplayMovie();
 
         // exercice 4
         Movie film2 = new Movie();
@@ -36,6 +35,17 @@ class Program
         playlist1.AddMovie(film1);
         playlist1.AddMovie(film2);
         playlist1.AddMovie(film3);
+
+        // exercice 5
+        Studio studio1 = new Studio();
+        studio1.Name = "20th Century Fox";
+        studio1.City = "Los Angeles";
+        film1.Studio = studio1;
+        Studio studio2 = new Studio();
+        studio2.Name = "Warner Bros";
+        studio2.City = "Burbank";
+        film2.Studio = studio1;
+        film3.Studio = studio2;
         playlist1.DisplayPlaylist();
     }
 }
