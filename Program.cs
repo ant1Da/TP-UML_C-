@@ -5,47 +5,48 @@ class Program
     static void Main(string[] args)
     {
         Movie film1 = new Movie();
-        film1.Title = "Avatar";
-        film1.Duration = 149;
+        film1.setTitle("Avatar");
+        film1.setDuration(149);
 
-        Director director1 = new Director();
-        director1.FirstName = "James";
-        director1.LastName = "Cameron";
-        director1.Country = "USA";
-        director1.DisplayDirector();
-        film1.Director = director1;
+        Director Director1 = new Director();
+        Director1.setFirstName("James");
+        Director1.setLastName("Cameron");
+        Director1.setCountry("Canada");
+        Director1.DisplayDirector();
+        film1.setDirector(Director1);
 
         // exercice 4
         Movie film2 = new Movie();
-        film2.Title = "Titanic";
-        film2.Duration = 195;
-        film2.Director = director1;
+        film2.setTitle("Titanic");
+        film2.setDuration(195);
+        film2.setDirector(Director1);
 
-        Director director2 = new Director();
-        director2.FirstName = "Christopher";
-        director2.LastName = "Nolan";
-        director2.Country = "UK";
+        Director Director2 = new Director();
+        Director2.setFirstName("Christopher");
+        Director2.setLastName("Nolan");
+        Director2.setCountry("UK");
         Movie film3 = new Movie();
-        film3.Title = "Inception";
-        film3.Duration = 148;
-        film3.Director = director2;
+        film3.setTitle("Inception");
+        film3.setDuration(148);
+        film3.setDirector(Director2);
         Playlist playlist1 = new Playlist();
-        playlist1.Name = "My Favorite Movies";
-        playlist1.Movies = new List<Movie>();
-        playlist1.AddMovie(film1);
-        playlist1.AddMovie(film2);
-        playlist1.AddMovie(film3);
+        playlist1.setName("My Favorite Movies");
+        playlist1.setMovies(new List<Movie>());
+        playlist1.addMovie(film1);
+        playlist1.addMovie(film2);
+        playlist1.addMovie(film3);
 
         // exercice 5
         Studio studio1 = new Studio();
-        studio1.Name = "20th Century Fox";
-        studio1.City = "Los Angeles";
-        film1.Studio = studio1;
+        studio1.setName("20th Century Fox");
+        studio1.setCity("Los Angeles");
+        film1.setStudio(studio1);
         Studio studio2 = new Studio();
-        studio2.Name = "Warner Bros";
-        studio2.City = "Burbank";
-        film2.Studio = studio1;
-        film3.Studio = studio2;
+        studio2.setName("Warner Bros");
+        studio2.setCity("Burbank");
+        film2.setStudio(studio1);
+        film3.setStudio(studio2);
         playlist1.DisplayPlaylist();
+        // exercice 6
     }
 }

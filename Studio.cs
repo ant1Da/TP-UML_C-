@@ -1,19 +1,13 @@
 class Studio
 {
-    private string name { get; set; }
-    private string city { get; set; }
-    public string Name
-    {
-        get { return name; }
-        set { name = value; }
-    }
-    public string City
-    {
-        get { return city; }
-        set { city = value; }
-    }
+    public string Name;
+    public string City;
+    public string getName() { return Name; }
+    public void setName(string name) { Name = name; }
+    public string getCity() { return City; }
+    public void setCity(string city) { City = city; }
     public void DisplayStudio()
     {
-        Console.WriteLine($"Studio : {this.Name} | Ville : {this.City}\n");
+        Console.WriteLine($"Studio : {this.getName()} | Ville : {this.getCity()}\n");
     }
 }
