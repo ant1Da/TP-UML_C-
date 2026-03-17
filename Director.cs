@@ -22,6 +22,6 @@ class Director
     }
     public void DisplayDirector()
     {
-        Console.WriteLine($"Nom : {FirstName} {LastName} | Pays : {Country}");
+        Console.WriteLine($"Nom : {FirstName} {LastName} | Pays : {Country}\n");
     }
 }

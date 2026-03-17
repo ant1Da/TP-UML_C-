@@ -15,5 +15,27 @@ class Program
         director1.DisplayDirector();
         film1.Director = director1;
         film1.DisplayMovie();
+
+        // exercice 4
+        Movie film2 = new Movie();
+        film2.Title = "Titanic";
+        film2.Duration = 195;
+        film2.Director = director1;
+
+        Director director2 = new Director();
+        director2.FirstName = "Christopher";
+        director2.LastName = "Nolan";
+        director2.Country = "UK";
+        Movie film3 = new Movie();
+        film3.Title = "Inception";
+        film3.Duration = 148;
+        film3.Director = director2;
+        Playlist playlist1 = new Playlist();
+        playlist1.Name = "My Favorite Movies";
+        playlist1.Movies = new List<Movie>();
+        playlist1.AddMovie(film1);
+        playlist1.AddMovie(film2);
+        playlist1.AddMovie(film3);
+        playlist1.DisplayPlaylist();
     }
 }
